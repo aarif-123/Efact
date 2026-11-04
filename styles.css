@@ -693,7 +693,7 @@ section[id],
 }
 
 .partner-track {
-  gap: 16px;
+  gap: 0;
   animation: partnerMarquee 36s linear infinite;
   will-change: transform;
 }
@@ -817,7 +817,7 @@ a.partner-card:hover {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-50% - 8px));
+    transform: translateX(-50%);
   }
 }
 
@@ -1426,26 +1426,17 @@ a.footer-social-link:hover {
   }
 
   .partner-marquee {
-    overflow-x: auto;
+    overflow: hidden;
     overscroll-behavior-inline: contain;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
   }
 
   .partner-track {
-    animation: none;
-    transform: none;
-    will-change: auto;
-  }
-
-  .partner-set[aria-hidden="true"] {
-    display: none;
+    animation-duration: 24s;
   }
 
   .partner-card {
     width: min(82vw, 340px);
     min-height: 112px;
-    scroll-snap-align: start;
     gap: 14px;
     padding: 16px;
   }
